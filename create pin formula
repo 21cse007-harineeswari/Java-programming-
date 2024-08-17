@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+	
+		int input1=sc.nextInt();
+		int input2=sc.nextInt();
+		int input3=sc.nextInt();
+		int input4=sc.nextInt();
+		int res1=minmax(input1);
+		int res2=minmax(input2);
+		int res3=minmax(input3);
+		int fin=(res1*res2*res3)-input4;
+		System.out.print(fin);
+	}
+		
+		private static int minmax(int n)
+		{
+		int max=0;
+		int min=9;
+		while(n>0)
+		{   
+		   
+		    int n1=n%10;
+		    if(n1>max)
+		    {
+		        max=n1;
+		       
+		    }
+		    if(n1<min)
+		    {
+		        min=n1;
+		    }
+		     n=n/10;
+		   
+		}
+    	return max*min;
+		}
+		
+		
+}
+
